@@ -79,7 +79,7 @@ const style = {
           navigate("/");
         } else {
           setError(data.error);
-          alert(Object.values(data).toString());
+      
         }
       })
       .catch((error) => {

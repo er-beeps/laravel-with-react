@@ -28,6 +28,7 @@ class ApiController extends Controller{
 
         return response()->json(['success'=>$status,'message'=>$message]);
     }
+    
     public function login(Request $request)
     {
         return $request->all();
