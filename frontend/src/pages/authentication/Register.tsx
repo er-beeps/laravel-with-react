@@ -83,11 +83,11 @@ const Register: FC = () => {
           justifyContent="center"
           mb={5}
         >
-          <Box width={38} mb={1}>
+          {/* <Box width={38} mb={1}>
             <img src="/static/logo/logo.svg" width="100%" alt="Uko Logo" />
-          </Box>
+          </Box> */}
           <H1 fontSize={24} fontWeight={700}>
-            Get started with Uko
+            Get started with Application
           </H1>
         </FlexBox>
 

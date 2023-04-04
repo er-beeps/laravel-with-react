@@ -1,6 +1,6 @@
 import createCache from "@emotion/cache";
 import { CacheProvider } from "@emotion/react";
-import { FC, ReactNode, useEffect } from "react";
+import React,{ FC, ReactNode, useEffect } from "react";
 import rtlPlugin from "stylis-plugin-rtl";
 
 // component props types

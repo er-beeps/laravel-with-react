@@ -5,7 +5,7 @@ import UserListColumnShape from "../../components/userManagement/columnShape";
 import CustomTable from "../../components/userManagement/CustomTable";
 import { userListFakeData } from "../../components/userManagement/fakeData";
 import useTitle from "../../hooks/useTitle";
-import { FC } from "react";
+import React,{ FC } from "react";
 import { useNavigate } from "react-router-dom";
 
 // styled component

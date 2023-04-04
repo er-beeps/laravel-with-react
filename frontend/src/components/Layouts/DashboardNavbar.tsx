@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import { H2 } from "../../components/Typography";
 import { TitleContext } from "../../contexts/TitleContext";
-import { FC, useContext } from "react";
+import React,{ FC, useContext } from "react";
 import LanguagePopover from "./popovers/LanguagePopover";
 import NotificationsPopover from "./popovers/NotificationsPopover";
 import ProfilePopover from "./popovers/ProfilePopover";

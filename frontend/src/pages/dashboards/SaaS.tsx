@@ -10,7 +10,7 @@ import BucketIcon from "../../icons/BucketIcon";
 import EarningIcon from "../../icons/EarningIcon";
 import PeopleIcon from "../../icons/PeopleIcon";
 import WindowsLogoIcon from "../../icons/WindowsLogoIcon";
-import { FC } from "react";
+import React,{ FC } from "react";
 
 const SaaS: FC = () => {
   // change navbar title

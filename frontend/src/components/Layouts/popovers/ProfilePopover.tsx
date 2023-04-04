@@ -1,5 +1,5 @@
 import { Badge, Box, ButtonBase, Divider, styled } from "@mui/material";
-import { FC, Fragment, useRef, useState } from "react";
+import React, { FC, Fragment, useRef, useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import FlexBox from "../../../components/FlexBox";

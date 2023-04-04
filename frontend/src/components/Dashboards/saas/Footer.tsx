@@ -1,6 +1,6 @@
 import { Box, Button, Card, styled } from "@mui/material";
 import { H1, Paragraph } from "../../../components/Typography";
-import { FC } from "react";
+import React,{ FC } from "react";
 
 // styled components
 const StyledCard = styled(Card)(({ theme }) => ({

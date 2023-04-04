@@ -2,6 +2,8 @@ import LoadingScreen from "../components/LoadingScreen";
 import jwtDecode from "jwt-decode";
 import React,{ createContext, ReactNode, useEffect, useReducer } from "react";
 import axios from "../utils/axios";
+import { URLS } from "../urls"
+
 
 // All types
 // =============================================
@@ -123,7 +125,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const login = async (email: string, password: string) => {
-    const response = await axios.post("/api/auth/login", {
+    const response = await axios.post(URLS.APP_BASE_URL+"api/v1/login", {
       email,
       password,
     });

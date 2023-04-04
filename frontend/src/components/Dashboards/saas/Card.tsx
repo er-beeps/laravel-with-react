@@ -1,6 +1,6 @@
 import { alpha, Box, Card, styled } from "@mui/material";
 import { H3, H5 } from "../../../components/Typography";
-import { FC } from "react";
+import React,{ FC } from "react";
 
 // root component interface
 interface SaaSCardProps {

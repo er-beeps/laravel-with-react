@@ -4,7 +4,7 @@ import FlexBox from "../../../components/FlexBox";
 import { H6, Paragraph, Tiny } from "../../../components/Typography";
 import UkoAvatar from "../../../components/UkoAvatar";
 import NotificationsIcon from "../../../icons/NotificationsIcon";
-import { FC, Fragment, SyntheticEvent, useRef, useState } from "react";
+import React,{ FC, Fragment, SyntheticEvent, useRef, useState } from "react";
 import PopoverLayout from "./PopoverLayout";
 
 // dummy  data

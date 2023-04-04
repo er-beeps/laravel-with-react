@@ -1,7 +1,7 @@
 import { Box, Card, useTheme } from "@mui/material";
 import { ApexOptions } from "apexcharts";
 import { H2, H5 } from "../../../components/Typography";
-import { FC } from "react";
+import React,{ FC } from "react";
 import Chart from "react-apexcharts";
 
 const data = {

@@ -18,7 +18,7 @@ export const SocialIconButton = styled(Button)(({ theme }) => ({
 }));
 
 export const TextFieldWrapper = styled(Box)(({ theme }) => ({
-  width: "48%",
+  width: "100%",
   [theme.breakpoints.down("sm")]: {
     width: "100%",
     marginTop: "0.5rem",

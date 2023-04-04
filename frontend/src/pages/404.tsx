@@ -1,7 +1,7 @@
 import { Box, useTheme } from "@mui/material";
 import FlexBox from "../components/FlexBox";
 import { H1, Paragraph } from "../components/Typography";
-import { FC } from "react";
+import React,{ FC } from "react";
 import { NavLink } from "react-router-dom";
 
 const ErrorPage: FC = () => {

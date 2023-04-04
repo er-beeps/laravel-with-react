@@ -9,7 +9,7 @@ import {
   TableRow,
 } from "@mui/material";
 import { H5, Small } from "../../../components/Typography";
-import { FC } from "react";
+import React,{ FC } from "react";
 import ScrollBar from "simplebar-react";
 
 const commonCSS = {

@@ -2,7 +2,7 @@ import { Box, Card, useTheme } from "@mui/material";
 import { ApexOptions } from "apexcharts";
 import FlexBox from "../../../components/FlexBox";
 import { H5 } from "../../../components/Typography";
-import { FC } from "react";
+import React,{ FC } from "react";
 import Chart from "react-apexcharts";
 import AnalyticsPopover from "./AnalyticsPopover";
 

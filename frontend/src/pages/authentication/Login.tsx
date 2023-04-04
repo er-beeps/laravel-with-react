@@ -22,6 +22,7 @@ import GoogleIcon from "../../icons/GoogleIcon";
 import React,{ FC, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
+import { URLS } from "../../urls"
 import * as Yup from "yup";
 
 const Login: FC = () => {
@@ -31,8 +32,8 @@ const Login: FC = () => {
   let navigate = useNavigate();
 
   const initialValues = {
-    email: "demo@example.com",
-    password: "v&)3?2]:",
+    email: "",
+    password: "",
     submit: null,
     remember: true,
   };
@@ -111,8 +112,8 @@ const Login: FC = () => {
           </Divider>
 
           <form noValidate onSubmit={handleSubmit} style={{ width: "100%" }}>
-            <FlexBox justifyContent="space-between" flexWrap="wrap">
-              <TextFieldWrapper>
+            {/* <FlexBox justifyContent="space-between" flexWrap="wrap"> */}
+              <TextFieldWrapper  >
                 <Paragraph fontWeight={600} mb={1}>
                   Email
                 </Paragraph>
@@ -143,7 +144,7 @@ const Login: FC = () => {
                   helperText={touched.password && errors.password}
                 />
               </TextFieldWrapper>
-            </FlexBox>
+            {/* </FlexBox> */}
 
             <FlexBox mt={2} alignItems="center" justifyContent="space-between">
               <FormControlLabel

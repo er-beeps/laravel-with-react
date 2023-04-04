@@ -2,7 +2,7 @@ import { Box, Button, Card, styled, useTheme } from "@mui/material";
 import FlexBox from "../../components/FlexBox";
 import { H6, Tiny } from "../../components/Typography";
 import UkoAvatar from "../../components/UkoAvatar";
-import { FC } from "react";
+import React,{ FC } from "react";
 
 // component props interface
 interface FollowerCardProps {

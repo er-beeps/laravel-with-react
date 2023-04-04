@@ -1,7 +1,7 @@
 import { KeyboardArrowDown } from "@mui/icons-material";
 import { Button, MenuItem, Popover } from "@mui/material";
 import { H6, Small } from "../../../components/Typography";
-import { FC, useRef, useState } from "react";
+import React,{ FC, useRef, useState } from "react";
 
 // dummy options
 const selectOptions = [

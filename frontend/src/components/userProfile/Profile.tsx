@@ -5,7 +5,7 @@ import MoreOptions from "../../components/MoreOptions";
 import { H3, H4, H6, Small } from "../../components/Typography";
 import FollowerIcon from "../../icons/FollowerIcon";
 import UserPlusIcon from "../../icons/UserPlusIcon";
-import { FC, MouseEvent, useState } from "react";
+import React,{ FC, MouseEvent, useState } from "react";
 import PostCard from "./PostCard";
 
 // styled components

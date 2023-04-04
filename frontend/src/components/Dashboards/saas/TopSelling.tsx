@@ -1,7 +1,7 @@
 import { Box, Card, Rating } from "@mui/material";
 import FlexBox from "../../../components/FlexBox";
 import { H5, Small } from "../../../components/Typography";
-import { FC } from "react";
+import React,{ FC } from "react";
 
 const TopSelling: FC = () => {
   return (

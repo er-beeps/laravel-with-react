@@ -13,7 +13,7 @@ import LightTextField from "../../components/LightTextField";
 import { Small, Tiny } from "../../components/Typography";
 import { useFormik } from "formik";
 import useTitle from "../../hooks/useTitle";
-import { FC } from "react";
+import React,{ FC } from "react";
 import * as Yup from "yup";
 
 // styled components

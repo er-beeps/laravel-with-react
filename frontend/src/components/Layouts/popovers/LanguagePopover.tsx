@@ -1,6 +1,6 @@
 import { Box, IconButton, MenuItem, Popover, styled } from "@mui/material";
 import { H6 } from "../../../components/Typography";
-import { FC, useRef, useState } from "react";
+import React,{ FC, useRef, useState } from "react";
 
 // dummy language options
 const languageOptions: {

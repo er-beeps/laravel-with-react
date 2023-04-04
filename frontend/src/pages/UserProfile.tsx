@@ -1,6 +1,6 @@
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import { Box, Card, Grid, Tab, styled } from "@mui/material";
-import { FC, SyntheticEvent, useState } from "react";
+import React,{ FC, SyntheticEvent, useState } from "react";
 import FlexBox from "../components/FlexBox";
 import SearchInput from "../components/SearchInput";
 import { H3, Small } from "../components/Typography";

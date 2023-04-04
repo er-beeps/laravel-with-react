@@ -1,5 +1,5 @@
 import { Box, styled } from "@mui/material";
-import { FC, Fragment, useState } from "react";
+import React,{ FC, Fragment, useState } from "react";
 import { Outlet } from "react-router-dom";
 import DashboardNavbar from "./DashboardNavbar";
 import DashboardSidebar from "./DashboardSideBar";
