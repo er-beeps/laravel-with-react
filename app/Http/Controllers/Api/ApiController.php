@@ -31,7 +31,23 @@ class ApiController extends Controller{
     
     public function login(Request $request)
     {
-        return $request->all();
+        
+        $credential= $request->validate([
+            'email'=>'required',
+            'password'=>'required'
+        ]);
+
+        // $credential=[
+        //     'username'=>$request->name,
+        //     'password'=>$request->password,
+        // ];
+
+        if(!auth()->attempt($credential)){
+            return response()->json(['success'=>false,'message'=>'Invalid Credentials']);
+        }
+        $accessToken =auth()->user()->createToken('authToken')->plainTextToken;
+
+        return response()->json(['success'=>true,'user'=>auth()->user(),'auth_token'=>$accessToken]);
     }
 
 }
