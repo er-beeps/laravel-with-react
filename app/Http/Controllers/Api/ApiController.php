@@ -37,17 +37,17 @@ class ApiController extends Controller{
             'password'=>'required'
         ]);
 
-        // $credential=[
-        //     'username'=>$request->name,
-        //     'password'=>$request->password,
-        // ];
-
         if(!auth()->attempt($credential)){
             return response()->json(['success'=>false,'message'=>'Invalid Credentials']);
         }
-        $accessToken =auth()->user()->createToken('authToken')->plainTextToken;
+        $accessToken =auth()->user()->createToken('accessToken')->accessToken;
 
-        return response()->json(['success'=>true,'user'=>auth()->user(),'auth_token'=>$accessToken]);
+        return response()->json(['success'=>true,'user'=>auth()->user(),'accessToken'=>$accessToken->token]);
+    }
+
+    public function userProfile(Request $request)
+    {
+    
     }
 
 }

@@ -1,7 +1,7 @@
 import FlexBox from "../../components/FlexBox";
 import { H6, Small, Tiny } from "../../components/Typography";
 import UkoAvatar from "../../components/UkoAvatar";
-
+import React from  "react";
 const UserListColumnShape = [
   {
     Header: "Name",

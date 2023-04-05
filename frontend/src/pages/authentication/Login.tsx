@@ -58,7 +58,7 @@ const Login: FC = () => {
           .then(() => {
             setLoading(false);
             toast.success("You Logged In Successfully test");
-            navigate("/dashboard");
+            navigate("/app");
           })
           .catch((error) => {
             setError(error.message);
@@ -92,7 +92,7 @@ const Login: FC = () => {
         </FlexBox>
 
         <FlexBox justifyContent="space-between" flexWrap="wrap" my="1rem">
-          <SocialIconButton
+          {/* <SocialIconButton
             // onClick={loginWithGoogle}
             startIcon={<GoogleIcon sx={{ mr: 1 }} />}
           >
@@ -109,7 +109,7 @@ const Login: FC = () => {
             <H3 color="text.disabled" px={1}>
               Or
             </H3>
-          </Divider>
+          </Divider> */}
 
           <form noValidate onSubmit={handleSubmit} style={{ width: "100%" }}>
             {/* <FlexBox justifyContent="space-between" flexWrap="wrap"> */}

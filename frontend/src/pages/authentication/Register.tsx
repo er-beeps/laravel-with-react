@@ -14,7 +14,7 @@ import {
 } from "../../components/authentication/StyledComponents";
 import FlexBox from "../../components/FlexBox";
 import LightTextField from "../../components/LightTextField";
-import { H1, H3, Small } from "../../components/Typography";
+import { H1, H3, Small,Paragraph } from "../../components/Typography";
 import { useFormik } from "formik";
 import useAuth from "../../hooks/useAuth";
 import FacebookIcon from "../../icons/FacebookIcon";
@@ -47,6 +47,7 @@ const Register: FC = () => {
     password: Yup.string()
       .min(6, "Password should be of minimum 6 characters length")
       .required("Password is required"),
+      terms:Yup.boolean().oneOf([true], 'You need to accept the terms and conditions'),
   });
 
   const { errors, values, touched, handleBlur, handleChange, handleSubmit } =
@@ -56,7 +57,7 @@ const Register: FC = () => {
       onSubmit: async (values: any) => {
         setLoading(true);
         try {
-          await register(values.email, values.password, values.name);
+          await register(values.name,values.email, values.password);
           setLoading(false);
           toast.success("You registered successfully");
           navigate("/dashboard");
@@ -92,7 +93,7 @@ const Register: FC = () => {
         </FlexBox>
 
         <FlexBox justifyContent="space-between" flexWrap="wrap" my="1rem">
-          <SocialIconButton
+          {/* <SocialIconButton
             // onClick={loginWithGoogle}
             startIcon={<GoogleIcon sx={{ mr: "0.5rem" }} />}
           >
@@ -109,16 +110,16 @@ const Register: FC = () => {
             <H3 color="text.disabled" px={1}>
               Or
             </H3>
-          </Divider>
+          </Divider> */}
 
           <form noValidate onSubmit={handleSubmit} style={{ width: "100%" }}>
-            <FlexBox justifyContent="space-between" flexWrap="wrap">
-              <TextFieldWrapper>
+            {/* <FlexBox justifyContent="space-between" flexWrap="wrap"> */}
+              <TextFieldWrapper sx={{ mt: 2, width: "100%" }}>
                 <LightTextField
                   fullWidth
                   name="name"
                   type="text"
-                  label="Name"
+                  label="Full Name"
                   onBlur={handleBlur}
                   onChange={handleChange}
                   value={values.name || ""}
@@ -127,7 +128,7 @@ const Register: FC = () => {
                 />
               </TextFieldWrapper>
 
-              <TextFieldWrapper>
+              <TextFieldWrapper sx={{ mt: 2, width: "100%" }}>
                 <LightTextField
                   fullWidth
                   name="email"
@@ -140,7 +141,7 @@ const Register: FC = () => {
                   helperText={touched.email && errors.email}
                 />
               </TextFieldWrapper>
-            </FlexBox>
+            {/* </FlexBox> */}
 
             <TextFieldWrapper sx={{ mt: 2, width: "100%" }}>
               <LightTextField

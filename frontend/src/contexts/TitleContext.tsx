@@ -12,7 +12,6 @@ type ProviderProps = {
 
 const TitleContextProvider = ({ children }: ProviderProps) => {
   const [title, setTitle] = useState("");
-  console.log(children);
 
   return (
     <TitleContext.Provider value={{ title, setTitle }}>

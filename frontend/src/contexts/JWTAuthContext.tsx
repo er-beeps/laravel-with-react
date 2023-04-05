@@ -3,6 +3,8 @@ import jwtDecode from "jwt-decode";
 import React,{ createContext, ReactNode, useEffect, useReducer } from "react";
 import axios from "../utils/axios";
 import { URLS } from "../urls"
+import { access } from "fs";
+import useAuth from "../hooks/useAuth";
 
 
 // All types
@@ -125,7 +127,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const login = async (email: string, password: string) => {
-    const response = await axios.post(URLS.APP_BASE_URL+"api/v1/login", {
+    const response = await axios.post(URLS.API_BASE_URL+"auth/login", {
       email,
       password,
     });
@@ -142,20 +144,17 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   };
 
   const register = async (
+    name: string,
     email: string,
-    username: string,
     password: string
   ) => {
-    const response = await axios.post("/api/auth/register", {
+    const response = await axios.post(URLS.API_BASE_URL+"auth/register", {
+      name,
       email,
-      username,
       password,
     });
     // @ts-ignore
     const { accessToken, user } = response.data;
-    setSession(accessToken);
-    console.log(response.data);
-
     dispatch({
       type: Types.Register,
       payload: {
@@ -173,13 +172,10 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     (async () => {
       try {
         const accessToken = window.localStorage.getItem("accessToken");
-
-        if (accessToken && isValidToken(accessToken)) {
-          setSession(accessToken);
-
-          const response = await axios.get("/api/auth/profile");
+        const user = initialState.user
+        if (accessToken) {
+          // const response = await axios.post(URLS.API_BASE_URL+"app/user-profile",{accessToken});
           //@ts-ignore
-          const { user } = response.data;
 
           dispatch({
             type: Types.Init,
