@@ -80,7 +80,7 @@ const routes = [
     ),
     children: [
       {
-        path: "",
+        path: "dashboard",
         element: <DashboardSaaS />,
       },
       {

@@ -66,9 +66,9 @@ const DashboardNavbar: FC<DashboardNavBarProps> = ({
 
           <Box flexGrow={1} textAlign="center">
             <img
-              src="/static/logo/logo.svg"
-              width="100%"
-              height="30"
+              src="/logo192.png"
+              width="50"
+              height="50"
               alt="Logo"
             />
           </Box>

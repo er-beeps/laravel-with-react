@@ -22,7 +22,7 @@ interface SideNavBarProps {
 // custom styled components
 const MainMenu = styled(Box)(({ theme }) => ({
   left: 0,
-  width: 80,
+  width: 90,
   height: "100%",
   position: "fixed",
   boxShadow: theme.shadows[2],
@@ -63,7 +63,7 @@ const DashboardSideBar: FC<SideNavBarProps> = ({
   const mainSideBarContent = (
     <List sx={{ height: "100%" }}>
       <StyledListItemButton disableRipple>
-        <img src="/static/logo/logo.svg" alt="UKO Logo" width={31} />
+        <img src="/logo192.png" alt="React Logo" width={40} />
       </StyledListItemButton>
 
       <ScrollBar style={{ maxHeight: "calc(100% - 50px)" }}>

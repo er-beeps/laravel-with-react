@@ -14,7 +14,7 @@ import React,{ FC } from "react";
 
 const SaaS: FC = () => {
   // change navbar title
-  useTitle("Saas");
+  useTitle("React with Laravel");
 
   const theme = useTheme();
 
