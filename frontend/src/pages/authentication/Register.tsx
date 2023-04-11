@@ -60,7 +60,7 @@ const Register: FC = () => {
           await register(values.name,values.email, values.password);
           setLoading(false);
           toast.success("You registered successfully");
-          navigate("/dashboard");
+          navigate("/app/dashboard");
         } catch (error: any) {
           setError(error.message);
           setLoading(false);

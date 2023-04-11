@@ -58,7 +58,7 @@ const Login: FC = () => {
           .then(() => {
             setLoading(false);
             toast.success("You Logged In Successfully test");
-            navigate("/app");
+            navigate("/app/dashboard");
           })
           .catch((error) => {
             setError(error.message);
